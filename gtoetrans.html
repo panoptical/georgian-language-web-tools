@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="gtoetrans.js"></script>
+</head>
+<body>
+
+<h1>Georgian to English Transcriber</h1>
+<p id="demo">გამარჯობათ მსოფლიო!</p>
+
+<button type="button" onclick="gtoetransdemo()">Transcribe</button>
+<p>
+<p>
+
+
+<textarea 
+  id="myTextarea"
+  rows="6"
+  cols="40"
+>Enter text to transcribe.
+</textarea>
+<textarea 
+  id="output"
+  rows="6"
+  cols="40"
+>Transcribed text will go here.
+</textarea>
+
+<p>
+
+<select id="trans_type">
+  <option selected value="nat">National</option>
+  <option value="natminus">National (minus apostrophes)</option>
+  <option value="ejcap">Capital Ejectives</option>
+  <option value="key">Keyboard</option>
+</select> 
+
+<button type="button" onclick="gtoetrans()">Transcribe</button>
+
+ 
+
+</body>
+</html> 
