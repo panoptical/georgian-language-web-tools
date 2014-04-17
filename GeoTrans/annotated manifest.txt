@@ -1,0 +1,51 @@
+﻿{
+  "name": "Hello World!", //name of the extension
+  "manifest_version": 2,  //newly required by Chrome
+  "version": "1.0",       //version of the extension
+  "description": "My first Chrome extension.",
+
+/*browser action creates an icon that is present all
+ the time.  Useful for extensions that apply to all pages*/
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+/*permissions describe what the extension can access.
+ "tabs" is necessary to access content of tabs
+ "<all_urls>" is necessary for accessing urls of all types
+*/
+
+  "permissions": [
+    "tabs", "<all_urls>"
+  ],
+
+
+/*a content script is injected into every page that matches
+ the "matches" field (in this case, every page)
+ the script to be injected is "translit.js"
+ this will run when the DOM is complete, but before images
+ are loaded
+*/ 
+
+  "content_scripts": [
+   {
+      "matches": ["<all_urls>"],
+      "js": ["translit.js"],
+      "run_at" : "document_end"
+
+   }
+]
+
+
+}
+
+
+
+
+
+
+
+
+

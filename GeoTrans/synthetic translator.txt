@@ -1,0 +1,43 @@
+﻿Synthetic Translater:
+
+ - look up the word
+  - success: return def(word)
+  - fail: 
+    - remove some morphology
+    - look up result
+      - success: return def(result) + def(morph)
+      - fail:
+        - look up permutations of result
+
+
+
+
+
+
+
+
+
+Put morphology in key, value pairs
+
+key = morph
+value = meaning
+
+noun cases:
+
+{ 
+"ი": "nom",
+"ო": "voc",
+"ის": "gen",  
+
+ - but this is problematic
+ - because there are lots of special cases!
+
+
+
+
+
+
+
+
+
+
